@@ -464,8 +464,8 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     /* Detonator box */
     .detonator-board { flex-direction: column; }
     .detonator-right { width: 100%; border-left: none; border-top: 1px solid #333; padding-left: 0; padding-top: 20px; }
-    .button-group { flex-direction: row; justify-content: center; flex-wrap: wrap; }
-    .control-row { justify-content: center; }
+    .button-group { flex-direction: row; justify-content: center; flex-wrap: nowrap; gap: 20px; }
+    .control-row { justify-content: center; flex-direction: column; gap: 10px; width: auto; align-items: center; }
     .detonator-title .desc { display: none; }
     .detonator-title .model { font-size: 1.2rem; }
 
@@ -534,8 +534,8 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     .analog-btn { width: 65px; height: 65px; }
     .analog-btn .btn-cap { top: 8px; left: 8px; width: 49px; height: 49px; }
     .control-label { font-size: 0.6rem; padding: 4px 8px; }
-    .control-row { gap: 10px; }
-    .button-group { gap: 12px; }
+    .control-row { flex-direction: column; gap: 8px; width: auto; align-items: center; }
+    .button-group { flex-direction: row; justify-content: center; gap: 15px; flex-wrap: nowrap; width: 100%; }
 
     .telemetry-feed { height: 70px; font-size: 0.5rem; padding: 6px 10px; }
 
@@ -625,10 +625,7 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-content reveal">
-                    <div class="tech-badge">
-                        <span class="pulse-dot"></span>
-                        Status: Sistemas Operacionais
-                    </div>
+
                     <h1>Potência Bruta. <br> Precisão Eletrônica <span class="highlight">Absoluta.</span></h1>
                     <p>Do controle milissegundo a milissegundo de detonações avançadas à modernização (retrofit) do seu maquinário obsoleto. Engenharia de ponta *in loco*.</p>
                     
@@ -652,6 +649,11 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
                                     <span class="desc">DISPARADOR DE TUBO DE CHOQUE</span>
                                 </div>
                                 <div class="detonator-brand">EXPLOCHIP</div>
+                            </div>
+                            
+                            <div class="tech-badge" style="margin-bottom: 20px; display: flex; width: fit-content; margin-left: auto; margin-right: auto; border-color: rgba(255,255,255,0.1); background: rgba(0,0,0,0.5);">
+                                <span class="pulse-dot"></span>
+                                Status: Sistemas Operacionais
                             </div>
                             
                             <!-- Main Control Board -->
