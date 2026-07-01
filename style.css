@@ -413,8 +413,8 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     white-space: nowrap; box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
 }
-.label-carregar { background: #ff9800; outline: 1px solid #fff; -webkit-text-stroke: 1px #000; }
-.label-cancelar { background: #f44336; outline: 1px solid #fff; -webkit-text-stroke: 1px #000; }
+.label-carregar { background: #ff9800; outline: 1px solid #fff; }
+.label-cancelar { background: #f44336; outline: 1px solid #fff; }
 .label-disparar { background: #222; color: #fff; outline: 1px solid #fff; }
 
 .disparar-text {
