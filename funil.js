@@ -61,7 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
         isCharged = false;
         triggerBtn.disabled = true;
         btnCarregar.disabled = false;
-        if (statusLights) statusLights.classList.remove('charged');
+        if (statusLights) {
+            const lights = statusLights.querySelectorAll('.light');
+            lights.forEach(light => light.classList.remove('on'));
+        }
         
         detonators.forEach(d => d.classList.remove('firing'));
         fracturePath.style.stroke = "rgba(255,255,255,0.1)";
@@ -73,7 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
         isCharged = true;
         simStatus.innerText = "SISTEMA CARREGADO";
         simStatus.style.color = "var(--color-lightning)";
-        if (statusLights) statusLights.classList.add('charged');
+        if (statusLights) {
+            const lights = statusLights.querySelectorAll('.light');
+            lights.forEach((light, i) => {
+                setTimeout(() => {
+                    light.classList.add('on');
+                }, i * 250);
+            });
+        }
         triggerBtn.disabled = false;
         btnCarregar.disabled = true;
         addTelemetryLog("> Tensão nos capacitores nominal. Pronto para disparo.", "system");
@@ -94,7 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
         
         simStatus.innerText = "SEQUÊNCIA INICIADA";
         simStatus.style.color = "#ef4444";
-        if (statusLights) statusLights.classList.remove('charged');
+        if (statusLights) {
+            const lights = statusLights.querySelectorAll('.light');
+            lights.forEach(light => light.classList.remove('on'));
+        }
         triggerBtn.disabled = true;
         btnCancelar.disabled = true;
         
