@@ -218,10 +218,13 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 
 /* Telemetry Logs */
 .telemetry-feed {
-    height: 120px; background: rgba(0,0,0,0.6); border-top: 1px solid var(--color-glass-border);
-    padding: 15px 20px; font-family: 'Courier New', monospace; font-size: 0.8rem;
+    height: 100px; background: rgba(0,0,0,0.6); border-top: 1px solid var(--color-glass-border);
+    padding: 10px 15px; font-family: 'Courier New', monospace; font-size: 0.6rem;
     overflow-y: auto; color: var(--color-silver-dim);
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
 }
+.telemetry-feed::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
 .log-entry { margin-bottom: 4px; opacity: 0; animation: fadeInLog 0.3s forwards; }
 .log-entry.system { color: #22c55e; }
 .log-entry.fire { color: var(--color-lightning); }
