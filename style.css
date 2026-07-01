@@ -112,7 +112,7 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 .logo-icon { width: 36px; height: 36px; color: var(--color-silver); }
 
 /* Mobile Menu Actions */
-.mobile-actions { display: none; align-items: center; gap: 15px; }
+.mobile-actions { display: none !important; }
 .mobile-whatsapp-only { padding: 8px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 .mobile-menu-btn {
     display: none;
@@ -408,8 +408,8 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 .control-row { display: flex; align-items: center; justify-content: flex-end; gap: 15px; width: 100%; }
 
 .control-label {
-    padding: 5px 12px; border-radius: 4px;
-    font-family: var(--font-heading); font-weight: 800; font-size: 0.7rem; color: #fff;
+    padding: 6px 14px; border-radius: 6px;
+    font-family: var(--font-heading); font-weight: 800; font-size: 0.95rem; color: #fff;
     white-space: nowrap; box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
 }
@@ -417,9 +417,13 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 .label-cancelar { background: #f44336; }
 .label-disparar { background: #222; color: #fff; border: 1px solid #444; }
 
+.disparar-text {
+    background: #050505; color: #fff; padding: 2px 6px; border-radius: 2px;
+}
+
 .analog-btn {
     background: transparent; border: none; cursor: pointer; outline: none;
-    position: relative; width: 90px; height: 90px; border-radius: 50%;
+    position: relative; width: 115px; height: 115px; border-radius: 50%;
     margin: 0 auto; display: block;
     transition: transform 0.1s;
 }
@@ -433,9 +437,9 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 }
 
 .analog-btn .btn-cap {
-    position: absolute; top: 10px; left: 10px; width: 70px; height: 70px;
+    position: absolute; top: 13px; left: 13px; width: 89px; height: 89px;
     border-radius: 50%; display: flex; justify-content: center; align-items: center;
-    font-family: var(--font-heading); font-weight: 800; font-size: 0.65rem; color: #111;
+    font-family: var(--font-heading); font-weight: 800; font-size: 0.8rem; color: #111;
     box-shadow: inset 0px 5px 10px rgba(255,255,255,0.5), inset 0px -5px 10px rgba(0,0,0,0.3), 0 5px 15px rgba(0,0,0,0.5);
     transition: all 0.2s;
 }
@@ -477,7 +481,7 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     .navbar .nav-contact-buttons { margin: 15px auto; display: flex; justify-content: center; margin-left: auto; }
     .navbar .nav-contact-buttons a { margin: 0 !important; }
     .nav-contact-buttons .btn-whatsapp-icon { display: none !important; }
-    .mobile-actions { display: flex; }
+    .mobile-actions { display: flex !important; flex-direction: row !important; align-items: center; justify-content: flex-end; gap: 10px; flex-wrap: nowrap; }
     .mobile-menu-btn { display: block; }
 
     .contact-container { gap: 30px; }
@@ -558,9 +562,9 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     .detonator-title .model { font-size: 1rem; }
     .detonator-brand { font-size: 0.8rem; }
 
-    .analog-btn { width: 65px; height: 65px; }
-    .analog-btn .btn-cap { top: 8px; left: 8px; width: 49px; height: 49px; }
-    .control-label { font-size: 0.6rem; padding: 4px 8px; }
+    .analog-btn { width: 85px; height: 85px; }
+    .analog-btn .btn-cap { top: 10px; left: 10px; width: 65px; height: 65px; }
+    .control-label { font-size: 0.8rem; padding: 4px 10px; }
     .control-row { flex-direction: column; gap: 8px; width: auto; align-items: center; }
     .button-group { flex-direction: row; justify-content: center; gap: 15px; flex-wrap: nowrap; width: 100%; }
 
