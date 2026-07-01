@@ -134,8 +134,8 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     background: transparent; color: var(--color-lightning);
     border: 1px solid var(--color-lightning);
     padding: 12px 24px; border-radius: 6px; font-weight: 600; font-family: var(--font-heading);
-    cursor: pointer; transition: var(--transition-smooth); display: inline-flex; align-items: center; gap: 10px;
-    text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;
+    cursor: pointer; transition: var(--transition-smooth); display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; text-decoration: none;
 }
 .btn-primary:hover, .btn-glow {
     background: var(--color-lightning); color: #000;
@@ -173,7 +173,7 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 .hero-topics { list-style: none; margin-bottom: 40px; max-width: 500px; padding: 0; }
 .hero-topics li { font-size: 1.1rem; color: var(--color-silver-dim); margin-bottom: 12px; position: relative; padding-left: 20px; }
 .hero-topics li::before { content: '►'; color: var(--color-lightning); position: absolute; left: 0; font-size: 0.8rem; top: 4px; }
-.hero-actions { display: flex; gap: 20px; }
+.hero-actions { display: flex; align-items: center; gap: 30px; }
 
 /* Simulator Layout */
 .hero-visual { flex: 1; position: relative; }
