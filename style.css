@@ -246,12 +246,12 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
    EM CAMPO (FIELD VIDEOS)
    ========================================================================== */
 .field-section { padding: 120px 0; position: relative; }
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+.video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 900px; margin: 0 auto; }
 .video-card { overflow: hidden; transition: transform 0.4s, border-color 0.4s; }
 .video-card:hover { transform: translateY(-5px); border-color: rgba(250, 204, 21, 0.3); }
 .video-card video {
-    width: 100%; display: block; aspect-ratio: 9/16; max-height: 500px;
-    object-fit: cover; background: #000;
+    width: 100%; display: block; aspect-ratio: 9/16;
+    object-fit: contain; background: #000;
 }
 .video-caption { padding: 20px 25px; }
 .video-caption h3 { font-size: 1.1rem; margin-bottom: 8px; color: #fff; }
