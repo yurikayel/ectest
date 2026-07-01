@@ -261,6 +261,21 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 .card p { color: var(--color-silver-dim); font-size: 0.95rem; }
 
 /* ==========================================================================
+   EM CAMPO (FIELD VIDEOS)
+   ========================================================================== */
+.field-section { padding: 120px 0; position: relative; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+.video-card { overflow: hidden; transition: transform 0.4s, border-color 0.4s; }
+.video-card:hover { transform: translateY(-5px); border-color: rgba(250, 204, 21, 0.3); }
+.video-card video {
+    width: 100%; display: block; aspect-ratio: 9/16; max-height: 500px;
+    object-fit: cover; background: #000;
+}
+.video-caption { padding: 20px 25px; }
+.video-caption h3 { font-size: 1.1rem; margin-bottom: 8px; color: #fff; }
+.video-caption p { color: var(--color-silver-dim); font-size: 0.9rem; }
+
+/* ==========================================================================
    BUSINESS MODEL (DIAGRAM & FEATURES)
    ========================================================================== */
 .business-model { padding: 100px 0; background: linear-gradient(0deg, rgba(10,1,5,1) 0%, rgba(20,5,10,0.5) 100%); }
@@ -461,6 +476,8 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
             </a>
             <nav class="nav-links">
                 <a href="#solucoes">Tecnologia</a>
+                <a href="#campo">Em Campo</a>
+                <a href="galeria.html">Galeria</a>
                 <a href="#diferenciais">Modelo de Negócios</a>
                 <a href="#contato" class="btn-primary">Falar com Engenharia</a>
             </nav>
@@ -636,6 +653,35 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
                         </div>
                         <h3>Robótica</h3>
                         <p>Manipuladores colaborativos de altíssima eficiência integrados diretamente ao seu chão de fábrica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="campo" class="field-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Em Campo</h2>
+                    <p>Registros reais dos nossos disparadores e explosivos em ambiente de testes e operação.</p>
+                </div>
+                <div class="video-grid">
+                    <div class="video-card glass-panel reveal">
+                        <video controls preload="metadata" poster="">
+                            <source src="remoto.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption">
+                            <h3>Teste em Ambiente Controlado</h3>
+                            <p>Demonstração do disparador remoto em ambiente de testes — ativação segura a distância com maleta DTC-02.</p>
+                        </div>
+                    </div>
+                    <div class="video-card glass-panel reveal" style="transition-delay: 200ms;">
+                        <video controls preload="metadata" poster="">
+                            <source src="disparo.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption">
+                            <h3>Disparo em Operação Real</h3>
+                            <p>Detonação controlada em campo — sequência de disparo com precisão milissegundo a milissegundo.</p>
+                        </div>
                     </div>
                 </div>
             </div>

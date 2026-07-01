@@ -243,6 +243,21 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 .card p { color: var(--color-silver-dim); font-size: 0.95rem; }
 
 /* ==========================================================================
+   EM CAMPO (FIELD VIDEOS)
+   ========================================================================== */
+.field-section { padding: 120px 0; position: relative; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+.video-card { overflow: hidden; transition: transform 0.4s, border-color 0.4s; }
+.video-card:hover { transform: translateY(-5px); border-color: rgba(250, 204, 21, 0.3); }
+.video-card video {
+    width: 100%; display: block; aspect-ratio: 9/16; max-height: 500px;
+    object-fit: cover; background: #000;
+}
+.video-caption { padding: 20px 25px; }
+.video-caption h3 { font-size: 1.1rem; margin-bottom: 8px; color: #fff; }
+.video-caption p { color: var(--color-silver-dim); font-size: 0.9rem; }
+
+/* ==========================================================================
    BUSINESS MODEL (DIAGRAM & FEATURES)
    ========================================================================== */
 .business-model { padding: 100px 0; background: linear-gradient(0deg, rgba(10,1,5,1) 0%, rgba(20,5,10,0.5) 100%); }
