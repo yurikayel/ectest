@@ -127,7 +127,9 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     color: var(--color-silver); text-decoration: none; font-size: 0.95rem; font-weight: 500;
     margin-left: 40px; transition: var(--transition-smooth);
 }
-.nav-links a:hover:not(.btn-primary) { color: var(--color-lightning); }
+.nav-links a:hover:not(.btn-primary):not(.btn-whatsapp) { color: var(--color-lightning); }
+.nav-contact-buttons { display: inline-flex; align-items: center; gap: 10px; margin-left: 40px; }
+.nav-contact-buttons a { margin-left: 0; }
 
 /* Buttons */
 .btn-primary {
@@ -142,6 +144,15 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     box-shadow: 0 0 20px var(--color-lightning-glow);
 }
 .btn-glow:hover { box-shadow: 0 0 30px var(--color-lightning); transform: translateY(-2px); }
+
+.btn-whatsapp {
+    background: #25D366; color: white; border: 1px solid #25D366;
+    padding: 12px 24px; border-radius: 6px; font-weight: 600; font-family: var(--font-heading);
+    cursor: pointer; transition: var(--transition-smooth); display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; text-decoration: none;
+}
+.btn-whatsapp:hover { background: #20b858; box-shadow: 0 0 20px rgba(37,211,102,0.4); transform: translateY(-2px); }
+.btn-whatsapp-icon { padding: 10px; border-radius: 50%; }
 
 .btn-secondary {
     color: var(--color-silver); text-decoration: none; font-family: var(--font-heading);
@@ -458,6 +469,8 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     }
     .navbar .nav-links.active { display: flex; }
     .navbar .nav-links a { margin: 15px 0; margin-left: 0; text-align: center; }
+    .navbar .nav-contact-buttons { margin: 15px auto; display: flex; justify-content: center; margin-left: auto; }
+    .navbar .nav-contact-buttons a { margin: 0 !important; }
 
     .footer-content { flex-direction: column; text-align: center; gap: 20px; }
     .footer-copy { text-align: center; }
