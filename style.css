@@ -111,6 +111,13 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 .logo-text { font-size: 1.8rem; font-weight: 700; letter-spacing: 2px; }
 .logo-icon { width: 36px; height: 36px; color: var(--color-silver); }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: transparent; border: none; color: var(--color-silver);
+    font-size: 1.8rem; cursor: pointer; padding: 5px 10px;
+}
+
 /* Logo Animation (Gears turning slowly) */
 .logo-icon .gear { transform-origin: 50% 50%; animation: spin 10s linear infinite; }
 .logo-icon .gear-teeth { transform-origin: 50% 50%; animation: spin 10s linear infinite; }
@@ -439,7 +446,15 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
     .form-grid { grid-template-columns: 1fr; }
     .input-group.full-width { grid-column: auto; }
 
-    .navbar .nav-links { display: none; }
+    .mobile-menu-btn { display: block; }
+    .navbar .nav-links { 
+        display: none; flex-direction: column; position: absolute; 
+        top: 100%; left: 0; width: 100%; 
+        background: rgba(10, 1, 5, 0.95); padding: 20px 0; 
+        border-bottom: 1px solid var(--color-glass-border);
+    }
+    .navbar .nav-links.active { display: flex; }
+    .navbar .nav-links a { margin: 15px 0; margin-left: 0; text-align: center; }
 
     .footer-content { flex-direction: column; text-align: center; gap: 20px; }
     .footer-copy { text-align: center; }

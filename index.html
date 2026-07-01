@@ -41,7 +41,12 @@
                 </svg>
                 <span class="logo-text silver">CHIP</span>
             </a>
-            <nav class="nav-links">
+            
+            <button class="mobile-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            
+            <nav class="nav-links" id="navLinks">
                 <a href="#solucoes">Tecnologia</a>
                 <a href="#campo">Em Campo</a>
                 <a href="galeria.html">Galeria</a>
@@ -178,8 +183,8 @@
             <div class="container">
                 <div class="section-header reveal" style="display: flex; align-items: center; justify-content: center; gap: 40px; text-align: left; max-width: 1050px; margin: 0 auto 60px auto;">
                     <div class="human-touch-img-wrapper" style="width: 500px; height: 500px; flex-shrink: 0; position: relative; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.6));">
-                        <div style="width: 100%; height: 100%; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); background: var(--color-lightning); padding: 5px;">
-                            <div style="width: 100%; height: 100%; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); background: #000; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+                        <div style="width: 100%; height: 100%; clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%); background: var(--color-lightning); padding: 5px;">
+                            <div style="width: 100%; height: 100%; clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%); background: #000; display: flex; justify-content: center; align-items: center; overflow: hidden;">
                                 <img src="cristiano.jpg" alt="Cristiano Espíndola" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                             </div>
                         </div>
