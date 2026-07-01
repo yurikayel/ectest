@@ -1,0 +1,31 @@
+# .gitignore — explochip
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Secrets and local overrides (never commit)
+.env
+.env.*
+*.pem
+credentials.json
+secrets/
+
+# Drafts with sensitive negotiations (uncomment if needed)
+# rascunhos/
+# *_privado.md
+
+# Build / export artifacts
+*.pdf.tmp
+dist/
+build/
+
+# Plan files (Cursor internal)
+.cursor/

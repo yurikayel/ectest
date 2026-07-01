@@ -146,7 +146,7 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 /* ==========================================================================
    HERO SECTION & BLASTING SIMULATOR
    ========================================================================== */
-.hero { min-height: 100vh; padding-top: 120px; display: flex; align-items: center; }
+.hero { min-height: 100vh; padding-top: 140px; display: flex; align-items: center; }
 .hero-container { display: flex; align-items: center; gap: 60px; }
 
 .hero-content { flex: 1; }
@@ -233,7 +233,7 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 /* ==========================================================================
    SOLUTIONS / ENGINEERING GRID
    ========================================================================== */
-.solutions { padding: 120px 0; position: relative; }
+.solutions { padding: 80px 0; position: relative; }
 .section-header { text-align: center; margin-bottom: 60px; }
 .section-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
 .section-header p { color: var(--color-silver-dim); font-size: 1.1rem; }
@@ -248,7 +248,7 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 /* ==========================================================================
    EM CAMPO (FIELD VIDEOS)
    ========================================================================== */
-.field-section { padding: 120px 0; position: relative; }
+.field-section { padding: 80px 0; position: relative; }
 .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 900px; margin: 0 auto; }
 .video-card { overflow: hidden; transition: transform 0.4s, border-color 0.4s; }
 .video-card:hover { transform: translateY(-5px); border-color: rgba(250, 204, 21, 0.3); }
@@ -263,7 +263,7 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 /* ==========================================================================
    BUSINESS MODEL (DIAGRAM & FEATURES)
    ========================================================================== */
-.business-model { padding: 100px 0; background: linear-gradient(0deg, rgba(10,1,5,1) 0%, rgba(20,5,10,0.5) 100%); }
+.business-model { padding: 80px 0; background: linear-gradient(0deg, rgba(10,1,5,1) 0%, rgba(20,5,10,0.5) 100%); }
 .flex-split { display: flex; gap: 80px; align-items: center; }
 
 .model-visual { flex: 1; padding: 40px; text-align: center; }
@@ -286,7 +286,7 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 /* ==========================================================================
    CONTACT SECTION & FORM
    ========================================================================== */
-.contact-section { padding: 120px 0; }
+.contact-section { padding: 80px 0; }
 .contact-container { display: flex; gap: 60px; }
 .contact-info { flex: 1; }
 .contact-info h2 { font-size: 3rem; margin-bottom: 20px; }
@@ -372,7 +372,10 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 
 .detonator-board { display: flex; gap: 30px; }
 .detonator-left { flex: 1; display: flex; flex-direction: column; gap: 10px; }
-.detonator-left .simulator-display { border: 4px solid #111; border-radius: 4px; overflow: hidden; background: #0a0a0a; height: auto; }
+.detonator-left .simulator-display { border: 4px solid #111; border-radius: 4px; overflow: hidden; background: #0a0a0a; flex: 1; min-height: 300px; }
+.status-lights { display: flex; gap: 8px; margin-top: 15px; justify-content: center; }
+.status-lights .light { width: 12px; height: 12px; border-radius: 50%; background: #222; border: 1px solid #111; box-shadow: inset 0 2px 4px rgba(0,0,0,0.8); transition: 0.3s; }
+.status-lights.charged .light { background: #00e5ff; box-shadow: 0 0 10px #00e5ff, inset 0 0 5px #fff; border-color: #00e5ff; }
 
 .detonator-right { width: 220px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; border-left: 1px solid #333; padding-left: 20px; }
 .button-group { display: flex; flex-direction: column; gap: 20px; width: 100%; margin-top: auto; margin-bottom: auto;}
@@ -480,12 +483,13 @@ h1, h2, h3, h4, .logo-text, .panel-title { font-family: var(--font-heading); }
 
     /* Videos */
     .video-grid { grid-template-columns: 1fr; max-width: 400px; }
-    .field-section { padding: 80px 0; }
+    .field-section { padding: 60px 0; }
 
     /* Solutions grid */
     .grid { grid-template-columns: 1fr; }
-    .solutions { padding: 80px 0; }
-    .contact-section { padding: 80px 0; }
+    .solutions { padding: 60px 0; }
+    .contact-section { padding: 60px 0; }
+    .detonator-left .simulator-display { min-height: 250px; }
 }
 
 /* ==========================================================================

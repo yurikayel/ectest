@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Parceria - DNA Network Ltda. & Explochip do Brasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-body: #f4f7f6;
+            --bg-paper: #ffffff;
+            --text-main: #1d1d1f;
+            --text-muted: #515154;
+            --text-heading: #0f172a;
+            --accent-color: #000000;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 210mm; /* A4 Width */
+            margin: 0 auto;
+            background: var(--bg-paper);
+            padding: 30mm 25mm;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-heading);
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        p, li {
+            font-size: 11pt;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+
+        li {
+            padding-left: 8px;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--text-heading);
+        }
+
+        /* Parties Grid */
+        .parties-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .party-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            background-color: #fafafa;
+        }
+
+        .party-card h4 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .party-card p {
+            font-size: 10pt;
+            margin-bottom: 8px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        /* Tables */
+        .table-container {
+            margin: 30px 0;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10.5pt;
+        }
+
+        th, td {
+            padding: 14px 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: var(--text-heading);
+            text-transform: uppercase;
+            font-size: 8.5pt;
+            letter-spacing: 0.5px;
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+
+        /* Formula Box */
+        .formula-box {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--accent-color);
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+            font-size: 10.5pt;
+        }
+
+        /* Clauses layout */
+        .clause {
+            margin-bottom: 35px;
+        }
+        
+        .clause h3 {
+            page-break-after: avoid;
+        }
+
+        /* Signatures */
+        .signature-section {
+            margin-top: 80px;
+            page-break-inside: avoid;
+        }
+
+        .signature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+            page-break-inside: avoid;
+        }
+
+        .signature-box {
+            text-align: center;
+            page-break-inside: avoid;
+        }
+
+        .signature-line {
+            height: 1px;
+            background-color: var(--accent-color);
+            margin-bottom: 15px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .signature-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--text-heading);
+            font-size: 1.15rem;
+        }
+
+        .signature-role {
+            font-size: 9.5pt;
+            color: var(--text-muted);
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .witness-section {
+            margin-top: 80px;
+            page-break-inside: avoid;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            font-size: 8.5pt;
+            color: var(--text-muted);
+        }
+
+        /* Print Utilities */
+        .page-break {
+            page-break-before: always;
+        }
+
+        @media print {
+            @page {
+                margin: 2cm;
+            }
+            body {
+                background-color: transparent;
+                padding: 0;
+                color: #000;
+                font-size: 10pt;
+                line-height: 1.4;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+                margin: 0;
+            }
+            
+            /* Compress Margins for Print */
+            h1 { font-size: 1.6rem; margin-bottom: 5px; }
+            .subtitle { margin-bottom: 25px; font-size: 10pt; }
+            h3 { margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem; }
+            p, li { margin-bottom: 10px; font-size: 10pt; }
+            .parties-grid { margin-bottom: 25px; gap: 20px; }
+            .party-card { padding: 15px; }
+            .party-card h4 { margin-bottom: 10px; font-size: 1.1rem; }
+            .clause { margin-bottom: 15px; }
+            .table-container { margin: 15px 0; }
+            table { font-size: 9.5pt; }
+            th, td { padding: 10px 12px; }
+            .formula-box { margin: 15px 0; padding: 15px; font-size: 9.5pt; }
+            .signature-section { margin-top: 40px; }
+            .signature-grid { margin-top: 40px; gap: 30px; }
+            .witness-section { margin-top: 40px; }
+            .footer { margin-top: 30px; padding-top: 15px; }
+            
+            /* Smart Page Breaks */
+            h1, h2, h3, h4, h5, h6 { 
+                page-break-after: avoid; 
+                break-after: avoid;
+            }
+            table, img, .party-card, .formula-box, .signature-box, .witness-section { 
+                page-break-inside: avoid; 
+                break-inside: avoid;
+            }
+            ul, ol, dl { 
+                page-break-before: avoid; 
+                break-before: avoid;
+            }
+            .page-break { 
+                page-break-before: always; 
+                break-before: always;
+            }
+            .clause {
+                page-break-inside: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Instrumento Particular de Parceria Comercial</h1>
+        <div class="subtitle">Estratégia, Marketing & Vendas B2B</div>
+
+        <div class="parties-grid">
+            <div class="party-card">
+                <h4>Parceira Comercial<br><span style="font-size:0.8em; color:#515154; font-family:'Inter', sans-serif; font-weight:normal;">DNA Network Ltda.</span></h4>
+                <p><strong>Titular:</strong> Alexandre Carvalho Ferreira, [nacionalidade], [estado civil], [profissão], portador do RG nº [RG/UF] e inscrito no CPF sob o nº [CPF]</p>
+                <p><strong>Natureza Jurídica:</strong> Empresário Individual</p>
+                <p><strong>CNPJ:</strong> 37.200.294/0001-05</p>
+                <p><strong>Endereço:</strong> Rua Maria Amália Lopes de Azevedo, 89, São Paulo – SP, CEP 02350-000</p>
+                <p><strong>Contato:</strong> +55 (11) 96558-8668</p>
+            </div>
+            
+            <div class="party-card">
+                <h4>Parceira Técnica<br><span style="font-size:0.8em; color:#515154; font-family:'Inter', sans-serif; font-weight:normal;">Explochip do Brasil</span></h4>
+                <p><strong>Razão Social:</strong> Explochip do Brasil Ltda</p>
+                <p><strong>CNPJ:</strong> 46.161.174/0001-37</p>
+                <p><strong>Endereço:</strong> Rua Levi de Castro Pires, 246, Teófilo Otoni – MG, CEP 39.801-009</p>
+                <p><strong>Representante:</strong> Cristiano Rafael Espindola, [nacionalidade], [estado civil], [profissão], portador do RG nº [RG/UF] e inscrito no CPF sob o nº [CPF]</p>
+                <p><strong>Cargo:</strong> Sócio-Administrador</p>
+                <p><strong>Contato:</strong> +55 (12) 99737-0029</p>
+            </div>
+        </div>
+
+        
+
+        <div class="clause">
+            <h3>I. Do Objeto</h3>
+            <p>O presente contrato estabelece uma parceria estratégica comercial, na qual a <strong>DNA Network Ltda.</strong> assume a gestão das operações de marketing digital e o funil de vendas da <strong>Explochip do Brasil</strong>, em contrapartida à participação percentual sobre o <strong>Faturamento Total Líquido da Explochip do Brasil</strong>.</p>
+        </div>
+
+        <div class="clause">
+            <h3>II. Dos Segmentos de Atuação</h3>
+            <ol>
+                <li><strong>Segmento I – Equipamentos Personalizados:</strong> Desenvolvimento dedicado para aplicações civis e militares.</li>
+                <li><strong>Segmento II – Retrofit e Manutenção:</strong> Reforma de painéis e equipamentos industriais.</li>
+                <li><strong>Segmento III – Automação e Painéis Elétricos:</strong> Preservando a estrutura mecânica original do cliente.</li>
+                <li><strong>Segmento IV – Robotização:</strong> Integração de robôs e manipuladores para linhas de produção.</li>
+            </ol>
+        </div>
+
+        <div class="clause">
+            <h3>III. Das Obrigações da DNA Network Ltda.</h3>
+            <ol>
+                <li>Gestão integral das vendas e canais de marketing digital.</li>
+                <li>Financiamento de campanhas de tráfego pago somente nos primeiros <strong>90 (noventa) dias</strong>.</li>
+                <li>Alocação de equipe especializada para operação do funil de vendas B2B.</li>
+                <li>Checagem junto ao INPI sobre a viabilidade do registro da marca, custeada exclusivamente pela EXPLOCHIP.</li>
+                <li>Criação da nova identidade visual, logomarca e branding da Explochip do Brasil.</li>
+            </ol>
+        </div>
+
+        <div class="clause">
+            <h3>IV. Das Obrigações da Explochip do Brasil</h3>
+            <ol>
+                <li>Execução de engenharia, garantia técnica e entrega dos projetos faturados.</li>
+                <li>Transparência contábil mensal, disponibilizando relatórios, notas fiscais e DRE até o 10º (décimo) dia útil do mês subsequente ao de apuração.</li>
+                <li>Após 90 (noventa) dias, destinar <strong>5% (cinco por cento) do Faturamento Total Líquido da Explochip do Brasil</strong> mensal para um fundo de marketing conjunto (teto de R$ 15.000,00 mensais), cuja gestão estratégica e aplicação operacional caberão à DNA Network Ltda.</li>
+                <li>Disponibilizar engenharia e suporte técnico para formulação de propostas comerciais no funil.</li>
+                <li>É de total responsabilidade jurídica da Explochip do Brasil toda e qualquer responsabilidade sobre o desempenho dos equipamentos oferecidos pela parceria.</li>
+            </ol>
+        </div>
+
+        <div class="clause">
+            <h3>V. Do Comissionamento e Financeiro</h3>
+            <p>Como contraprestação pelo acordo de parceria, a DNA Network Ltda. receberá comissão incidente diretamente sobre a <strong>Margem Líquida</strong> de cada operação faturada pela Explochip do Brasil:</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Faixa de Faturamento Acumulado Global</th>
+                            <th class="text-center">Participação sobre Líquido da EXPLOCHIP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Até R$ 150.000,00</td><td class="text-center"><strong>3%</strong></td></tr>
+                        <tr><td>De R$ 150.000,01 a R$ 300.000,00</td><td class="text-center"><strong>5%</strong></td></tr>
+                        <tr><td>De R$ 300.000,01 a R$ 500.000,00</td><td class="text-center"><strong>7%</strong></td></tr>
+                        <tr><td>Acima de R$ 500.000,00</td><td class="text-center"><strong>10%</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>O pagamento das comissões ocorrerá em até <strong>30 (trinta) dias</strong> após o efetivo Recebimento do Cliente.</p>
+        </div>
+
+        <div class="clause">
+            <h3>VI. Da Universalidade do Faturamento</h3>
+            <p>Fica pactuado que a comissão incidirá sobre a <strong>Margem Líquida de todas as operações e vendas da Explochip do Brasil</strong>, englobando todos os seus clientes e segmentos. Em virtude dessa universalidade, elimina-se a necessidade de distinção ou rastreamento de origem (lead da DNA Network Ltda. vs. captação própria da Explochip do Brasil). Toda nota fiscal emitida pela Explochip do Brasil comporá a base de comissionamento.</p>
+        </div>
+
+        <div class="clause">
+            <h3>VII. Da Exclusividade</h3>
+            <p>A Explochip do Brasil concorda em não contratar agências ou parceiros concorrentes de marketing para os Segmentos I a IV durante a vigência. Em contrapartida, a DNA Network Ltda. não prestará serviços de captação para concorrentes diretos no nicho de automação industrial customizada.</p>
+        </div>
+
+        <div class="clause">
+            <h3>VIII. Propriedade Intelectual</h3>
+            <p>A titularidade da marca "Explochip do Brasil" permanece sob o domínio da Explochip do Brasil. As criações desenvolvidas pela DNA Network Ltda. (branding, site, campanhas) são licenciadas em caráter perpétuo à Explochip do Brasil após o cumprimento integral das obrigações do contrato. Contas digitais em nome da marca serão plenamente transferidas na eventualidade de rescisão.</p>
+        </div>
+
+        <div class="clause">
+            <h3>IX. Proteção de Dados (LGPD) e Sigilo</h3>
+            <p>Compromisso de absoluto sigilo sobre informações tecnológicas, estratégicas e financeiras por <strong>5 (cinco) anos</strong> após a finalização do vínculo, garantindo aderência rigorosa às normas da LGPD no tratamento de dados de leads e empresas.</p>
+        </div>
+
+        <div class="clause">
+            <h3>X. Do Período Inicial e de Alinhamento</h3>
+            <ol>
+                <li><strong>Duração:</strong> Fica estabelecido um período inicial de <strong>90 (noventa) dias</strong>, contados a partir de 01/07/2026, para estruturação e validação do modelo operacional da parceria.</li>
+                <li><strong>Obrigações no Período:</strong> Durante este período, a DNA Network Ltda. absorverá os custos e manterá o investimento próprio em mídia. A Explochip do Brasil assegurará a transparência contábil e técnica, sendo as comissões devidas normalmente sobre as vendas faturadas e recebidas, ainda que dentro do período inicial de 90 (noventa) dias.</li>
+                <li><strong>Revisão Obrigatória:</strong> Ao término do período inicial, as partes realizarão reunião de alinhamento obrigatória para revisar metas, funil de vendas e instituir o fundo de marketing conjunto.</li>
+                <li><strong>Rescisão Livre de Ônus:</strong> Conforme diretriz geral (Cláusula XIII), a parceria poderá ser encerrada a qualquer momento durante ou após este período, por qualquer das partes, sem a incidência de multas ou ônus compensatórios.</li>
+            </ol>
+        </div>
+
+        <div class="clause">
+            <h3>XI. Vigência e Revisões</h3>
+            <p>O ciclo total da parceria é fixado em <strong>24 (vinte e quatro) meses</strong> (até 30/06/2028). Após este ciclo, o contrato renova-se automaticamente por prazos análogos, salvo oposição documentada com 60 (sessenta) dias de antecedência.</p>
+        </div>
+
+        <div class="clause">
+            <h3>XII. Da Rescisão e Ausência de Multas</h3>
+            <ol>
+                <li><strong>Livre Rescisão:</strong> O presente contrato poderá ser rescindido e cancelado por qualquer das partes, a qualquer momento e sem necessidade de justificativa (sem justa causa), mediante simples notificação prévia por escrito com antecedência de <strong>30 (trinta) dias</strong>.</li>
+                <li><strong>Ausência Absoluta de Ônus ou Penalidades:</strong> Fica expressamente acordado que o cancelamento ou a rescisão do contrato a qualquer momento <strong>não gerará nenhum tipo de multa, punição ou obrigação de indenização compensatória</strong> para nenhuma das partes.</li>
+                <li><strong>Rescisão Imediata (Justa Causa):</strong> A rescisão poderá ter efeito imediato (dispensando aviso prévio) nos casos de quebra de exclusividade, fraude na apuração de valores ou violação de confidencialidade/LGPD, mantendo-se a absoluta ausência de multas punitivas financeiras.</li>
+                <li><strong>Efeitos Operacionais da Rescisão:</strong> Em caso de distrato, as comissões devidas sobre vendas já faturadas e recebidas permanecem integralmente pagáveis; vendas em pipeline que já possuam proposta aceita gerarão comissão integral desde que faturadas em até <strong>90 (noventa) dias</strong>. As obrigações de sigilo mantêm-se vigentes.</li>
+            </ol>
+        </div>
+
+        <div class="clause">
+            <h3>XIII. Do Inadimplemento e Força Maior</h3>
+            <ol>
+                <li><strong>Inadimplemento:</strong> Em caso de descumprimento material de qualquer obrigação, a parte lesada notificará a infratora para sanar em 15 dias. Caso não sanada, a lesada poderá rescindir o contrato imediatamente. Conforme diretriz desta parceria, <strong>não incidirão multas punitivas ou penalidades financeiras</strong>, resguardado apenas o direito de encerramento da operação.</li>
+                <li><strong>Força maior:</strong> Eventos imprevisíveis suspendem as obrigações afetadas pelo prazo do evento, mediante comunicação.</li>
+            </ol>
+        </div>
+
+        <div class="clause">
+            <h3>XIV. Disposições Gerais</h3>
+            <p>Modificações nas premissas contratuais apenas são reconhecidas por meio de aditivos escritos. A eventual nulidade de uma condição não invalida o escopo remanescente da parceria.</p>
+        </div>
+
+        <div class="clause">
+            <h3>XV. Foro e Mediação</h3>
+            <p>Determina-se o <strong>Foro Regional I - Santana</strong> da comarca de São Paulo/SP para resolução de litígios, com a premissa irrevogável de que as partes deverão esgotar a busca por resolução via mediação prévia em um período de <strong>30 (trinta) dias</strong> antes do acionamento jurídico.</p>
+        </div>
+
+        <!-- Anexos Técnicos (Page Break for Print) -->
+        <div class="page-break"></div>
+
+        <h3 style="margin-top: 20px; text-align: center; border: none; font-size: 1.6rem;">Anexo Técnico: Lógica de Apuração</h3>
+        
+        <div class="formula-box">
+            <strong style="color: var(--primary-color); font-size: 1.05rem;">Cálculo da Comissão = (Receita da NF - Custos e Impostos) × % da Escala</strong>
+            <div style="margin-top: 8px; font-size: 0.9rem; color: #64748b;">
+                <em>*Os custos incluem peças, insumos, impostos diretos e custos de produção.</em>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 18%;">Contexto</th>
+                        <th class="text-center">Receita NF (R$)</th>
+                        <th class="text-center">Custos e Impos. (R$)</th>
+                        <th class="text-center">Margem Líq. (R$)</th>
+                        <th class="text-center">Escala</th>
+                        <th class="text-center">Comissão DNA (R$)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Projeto 01</strong></td>
+                        <td class="text-center">80.000,00</td>
+                        <td class="text-center" style="color: #ef4444;">-50.000,00</td>
+                        <td class="text-center">30.000,00</td>
+                        <td class="text-center">3%</td>
+                        <td class="text-center" style="color: #059669;"><strong>900,00</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Projeto 02</strong></td>
+                        <td class="text-center">100.000,00</td>
+                        <td class="text-center" style="color: #ef4444;">-60.000,00</td>
+                        <td class="text-center">40.000,00</td>
+                        <td class="text-center">5%</td>
+                        <td class="text-center" style="color: #059669;"><strong>2.000,00</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Projeto 03</strong></td>
+                        <td class="text-center">40.000,00</td>
+                        <td class="text-center" style="color: #ef4444;">-20.000,00</td>
+                        <td class="text-center">20.000,00</td>
+                        <td class="text-center">5%</td>
+                        <td class="text-center" style="color: #059669;"><strong>1.000,00</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="signature-section">
+            <h3 style="text-align: center; border: none; font-size: 1.6rem;">Assinaturas</h3>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 50px;">
+                Por estarem justas e acordadas, assinam o presente em 2 (duas) vias de igual teor.<br><br>
+                São Paulo, ___ de ____________ de 2026.
+            </p>
+            
+            <div class="signature-grid">
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <div class="signature-name">DNA Network Ltda.</div>
+                    <div class="signature-role">Alexandre Carvalho Ferreira</div>
+                </div>
+                <div class="signature-box">
+                    <div class="signature-line"></div>
+                    <div class="signature-name">Explochip do Brasil Ltda</div>
+                    <div class="signature-role">Cristiano Rafael Espindola</div>
+                </div>
+            </div>
+
+            <div class="witness-section">
+                <h4 style="text-align: center; margin-bottom: 40px; border-bottom: none;">Testemunhas</h4>
+                <div class="signature-grid">
+                    <div class="signature-box">
+                        <div class="signature-line"></div>
+                        <div style="text-align: left; padding-left: 5%;">
+                            <span class="signature-role">Nome:</span><br>
+                            <span class="signature-role">CPF:</span>
+                        </div>
+                    </div>
+                    <div class="signature-box">
+                        <div class="signature-line"></div>
+                        <div style="text-align: left; padding-left: 5%;">
+                            <span class="signature-role">Nome:</span><br>
+                            <span class="signature-role">CPF:</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Protocolo de parceria comercial B2B.<br>
+            Documento formatado e revisado para via impressa.
+        </div>
+    </div>
+
+</body>
+</html>

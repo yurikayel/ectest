@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>DNA Network - T-Shirt Graphic (Industrial Label)</title>
+    <style>
+        body {
+            background-color: #050505;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            color: #888;
+        }
+        .container {
+            background: #111;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            border: 1px solid #222;
+        }
+        svg {
+            width: 800px;
+            height: auto;
+        }
+        .desc {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background for preview (can be removed for actual transparent t-shirt print) -->
+            <rect width="100%" height="100%" fill="#111" />
+            
+            <!-- T-Shirt Graphic Group -->
+            <g transform="translate(50, 50)" fill="none" stroke="#FFC107">
+                
+                <!-- Outer Frame (Heavy Duty Crate Style) -->
+                <rect x="0" y="0" width="700" height="500" stroke-width="8" />
+                
+                <!-- Registration / Crop Marks (Analog print feel) -->
+                <path d="M-20,0 L20,0 M0,-20 L0,20 M720,0 L680,0 M700,-20 L700,20 M-20,500 L20,500 M0,520 L0,480 M720,500 L680,500 M700,520 L700,480" stroke-width="4" stroke="#ffffff" />
+                
+                <!-- Technical Grid Lines -->
+                <line x1="0" y1="80" x2="700" y2="80" stroke-width="4" />
+                <line x1="0" y1="380" x2="700" y2="380" stroke-width="4" />
+                <line x1="480" y1="380" x2="480" y2="500" stroke-width="4" />
+
+                <!-- Top Section Text -->
+                <text x="30" y="50" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#FFC107" stroke="none">SYS.IDENT: DNA-NWK-01</text>
+                <text x="500" y="50" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff" stroke="none">STATUS: ACTIVE</text>
+                
+                <!-- Main Logo Typography (Brutalist) -->
+                <text x="350" y="220" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="140" font-weight="900" fill="#FFC107" stroke="none" letter-spacing="4">DNA</text>
+                <text x="350" y="320" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="100" font-weight="900" fill="#ffffff" stroke="none" letter-spacing="12">NETWORK</text>
+                
+                <!-- Bottom Left: Descriptor -->
+                <text x="30" y="430" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" stroke="none">OPERATIONAL UNIT:</text>
+                <text x="30" y="465" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#FFC107" stroke="none">INDUSTRIAL MARKETING & ENG</text>
+
+                <!-- Bottom Right: Barcode simulation for that analog/cargo look -->
+                <g transform="translate(505, 400)" fill="#FFC107" stroke="none">
+                    <rect x="0" y="0" width="8" height="60" />
+                    <rect x="12" y="0" width="4" height="60" />
+                    <rect x="20" y="0" width="12" height="60" />
+                    <rect x="36" y="0" width="4" height="60" />
+                    <rect x="44" y="0" width="8" height="60" />
+                    <rect x="56" y="0" width="16" height="60" />
+                    <rect x="76" y="0" width="4" height="60" />
+                    <rect x="84" y="0" width="12" height="60" />
+                    <rect x="100" y="0" width="8" height="60" />
+                    <rect x="112" y="0" width="16" height="60" />
+                    <rect x="132" y="0" width="4" height="60" />
+                    <rect x="140" y="0" width="12" height="60" />
+                    <text x="75" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">0 1029 3847 56</text>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div class="desc">
+        ESTILO "INDUSTRIAL CARGO LABEL" PARA ESTAMPA (SILK-SCREEN)
+    </div>
+</body>
+</html>

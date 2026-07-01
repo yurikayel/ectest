@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const detonators = document.querySelectorAll('.detonator-node');
     const telemetryLog = document.getElementById('telemetryLog');
     const simStatus = document.getElementById('simStatus');
+    const statusLights = document.getElementById('statusLights');
     const rockStructure = document.querySelector('.rock-structure');
     const fracturePath = document.getElementById('fracturePath');
     
@@ -60,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isCharged = false;
         triggerBtn.disabled = true;
         btnCarregar.disabled = false;
+        if (statusLights) statusLights.classList.remove('charged');
         
         detonators.forEach(d => d.classList.remove('firing'));
         fracturePath.style.stroke = "rgba(255,255,255,0.1)";
@@ -71,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isCharged = true;
         simStatus.innerText = "SISTEMA CARREGADO";
         simStatus.style.color = "var(--color-lightning)";
+        if (statusLights) statusLights.classList.add('charged');
         triggerBtn.disabled = false;
         btnCarregar.disabled = true;
         addTelemetryLog("> Tensão nos capacitores nominal. Pronto para disparo.", "system");
@@ -91,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         simStatus.innerText = "SEQUÊNCIA INICIADA";
         simStatus.style.color = "#ef4444";
+        if (statusLights) statusLights.classList.remove('charged');
         triggerBtn.disabled = true;
         btnCancelar.disabled = true;
         
